@@ -1,0 +1,40 @@
+Bard (Google)
+Bard has an official API and an unofficial API. The official one has very little publicity and is currently waiting list only. Links to sign up are here (for companies) or here (for independent developers, currently geo-restricted to not-UK).
+The unofficial API works by manually obtaining the value of a specific cookie from  https://bard.google.com/chat and using it as a token (as described in https://github.com/dsdanielpark/Bard-API). Chloe wasn’t able to get this to work on her personal computer, but the API is theoretically possible!
+There are two big concerns with the unofficial one. First of all, with any unofficial API, it may stop working/be blocked by Google. Secondly, the cookie values seem hard to manage: people report that there’s no set pattern to how long their cookies last. Sometimes they can use the same cookie for weeks, other times, it’s closer to an hour. If running code, we want to be consistent in how long our authentication tokens last. 
+ 
+Chat GPT
+The documentation is robust and covers a variety of areas. Both Chris and Chloe have got ChatGPT to work. New accounts (as of 19/12/2023) come with $5 of free credit; however, making unlimited accounts isn’t possible. Before getting an API key, one must link their phone with their account, and if the phone has been linked before, no credit. 
+Different usages include:
+•	understanding images
+•	text-to-speech/speech-to-text
+•	generating text
+•	editing images
+•	images to text
+The documentation page has examples of all of these and more. 
+Pricing depends on what version of ChatGPT, as well as what the inputs/outputs are.
+ 
+Claude 
+Waiting list only. Sign up here: Product \ Anthropic
+ Gemini (Google)
+Gemini only works in certain countries - this doesn’t include the UK. This may become unrestricted at some point, but we don't know.
+Llama 2 (Meta). 
+Llama can either be run in the cloud (hosted by Replicate [blocked], or self-hosted by SageMaker/EC2/similar) or run locally. Llama has lots of information about different ways to host/run. The documentation states that it is possible to run Llama on a Mac or on Google Colab (whether it works on other operating systems or Jupyter Notebook is unknown, but probable). Obviously, running the model on the cloud is much faster than running locally, but it costs money, unlike running locally.
+The feasibility of running locally is currently being tested by Chloe. Update: Doesn’t work on the latest version of Python (3.11) but works on 3.10. Tried out one of the sample questions and the answer wasn’t great. 
+Llama is also on Azure. 
+Megatron 
+-Megatron seems to be used for specific purposes - mainly training deep learning models (sort of like tensorflow). Documentation is https://megatron.readthedocs.io/en/latest/index.html.  Unclear how useful it is for some of our purposes (i.e. could it be used to summarise text?)
+Mistral: 
+The waiting list can be signed up to here. It is also possible to download the opensource model from Hugging Face, and this can be explored at some point. 
+ 
+Other LLMs:
+If you google “best LLMs,” there are many many results with various rationales. Two potentially interesting ones Chloe found were:
+•	https://github.com/Mintplex-Labs/anything-llm looks potentially interesting - the idea of being able to upload documents seems interesting, but maybe also not anything that, say, ChatGPT can’t do. 
+•	Microsoft has Phi-2: https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/. It just got released, so Chloe hasn’t had time to look more into its capabilities. 
+Various lists of LLMs if anyone wants to take a look!
+•	https://www.techopedia.com/6-best-open-source-llms-to-watch-out-for-in-2024
+•	https://www.techtarget.com/whatis/feature/12-of-the-best-large-language-models
+•	https://www.datacamp.com/blog/top-open-source-llms
+•	https://nordicapis.com/7-large-language-model-llm-apis/
+•	https://www.lakera.ai/blog/open-source-llms
+
